@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj45aeee31j36"]
+
+[ext_resource type="Texture2D" uid="uid://8hov4ax1mjlo" path="res://Assets/watermelon.png" id="1_gdb2w"]
+[ext_resource type="Script" path="res://Scripts/watermelon.gd" id="1_wey54"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6oppv"]
+radius = 155.0
+
+[node name="watermelon" type="RigidBody2D"]
+script = ExtResource("1_wey54")
+
+[node name="Watermelon" type="Sprite2D" parent="."]
+texture = ExtResource("1_gdb2w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6oppv")

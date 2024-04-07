@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbc40rtdjhhvh"]
+
+[ext_resource type="Script" path="res://Scripts/grape.gd" id="1_buryg"]
+[ext_resource type="Texture2D" uid="uid://b4g1chskqgi2w" path="res://Assets/grape.png" id="1_wk2nc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w5dkv"]
+radius = 34.0
+
+[node name="grape" type="RigidBody2D"]
+script = ExtResource("1_buryg")
+
+[node name="Grape" type="Sprite2D" parent="."]
+scale = Vector2(0.841772, 0.841772)
+texture = ExtResource("1_wk2nc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_w5dkv")

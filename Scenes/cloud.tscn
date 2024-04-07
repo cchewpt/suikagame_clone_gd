@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://dfq0jtywegpcg"]
+
+[ext_resource type="Texture2D" uid="uid://dwaf2q68n62c8" path="res://Assets/player.png" id="1_lvbd3"]
+[ext_resource type="Texture2D" uid="uid://bccjnbnaivu24" path="res://Assets/cherry.png" id="2_bgos1"]
+[ext_resource type="Texture2D" uid="uid://byns1ghljegfh" path="res://Assets/strawberry.png" id="3_erqru"]
+[ext_resource type="Texture2D" uid="uid://b4g1chskqgi2w" path="res://Assets/grape.png" id="4_faslx"]
+[ext_resource type="Texture2D" uid="uid://b63othli2eo2h" path="res://Assets/dekopon.png" id="5_ofm6y"]
+
+[node name="cloud" type="Node2D"]
+
+[node name="cloud" type="Sprite2D" parent="."]
+position = Vector2(27, -21)
+scale = Vector2(0.04266, 0.04266)
+texture = ExtResource("1_lvbd3")
+
+[node name="cherry" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.846939, 0.846939)
+texture = ExtResource("2_bgos1")
+
+[node name="strawberry" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("3_erqru")
+
+[node name="grape" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.575949, 0.575949)
+texture = ExtResource("4_faslx")
+
+[node name="dekopon" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.67284, 0.67284)
+texture = ExtResource("5_ofm6y")

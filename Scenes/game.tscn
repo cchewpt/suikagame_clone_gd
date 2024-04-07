@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://c6k2nfoo8gegn"]
+
+[ext_resource type="PackedScene" uid="uid://66uw1vpxij00" path="res://Scenes/bucket.tscn" id="1_0i6oe"]
+[ext_resource type="Texture2D" uid="uid://i7k5mbq3g33t" path="res://Assets/background.png" id="1_2wen0"]
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_fhsom"]
+[ext_resource type="PackedScene" uid="uid://dfq0jtywegpcg" path="res://Scenes/cloud.tscn" id="4_1rdqw"]
+[ext_resource type="Script" path="res://Scripts/cloud.gd" id="5_8ooen"]
+[ext_resource type="PackedScene" uid="uid://bi80ycshwydan" path="res://Scenes/control.tscn" id="5_k1af1"]
+
+[sub_resource type="GDScript" id="GDScript_pw41k"]
+script/source = "extends Node2D
+
+"
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_fhsom")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(288, 420)
+scale = Vector2(0.819407, 0.819407)
+texture = ExtResource("1_2wen0")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(288, 512)
+
+[node name="bucket" parent="." instance=ExtResource("1_0i6oe")]
+
+[node name="cloud" parent="." instance=ExtResource("4_1rdqw")]
+position = Vector2(288, 114)
+script = ExtResource("5_8ooen")
+
+[node name="control" parent="." instance=ExtResource("5_k1af1")]
+script = SubResource("GDScript_pw41k")
+
+[connection signal="dropped_fruit" from="cloud" to="." method="_on_cloud_dropped_fruit"]

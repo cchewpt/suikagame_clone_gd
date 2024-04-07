@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6ebcs1xo4nny"]
+
+[ext_resource type="Texture2D" uid="uid://4mold7h3dmv3" path="res://Assets/peach.png" id="1_7y352"]
+[ext_resource type="Script" path="res://Scripts/peach.gd" id="1_na1d7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sqw6a"]
+radius = 92.0054
+
+[node name="peach" type="RigidBody2D"]
+script = ExtResource("1_na1d7")
+
+[node name="Peach" type="Sprite2D" parent="."]
+texture = ExtResource("1_7y352")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sqw6a")

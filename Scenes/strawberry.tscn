@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjbj7q6mtnb2"]
+
+[ext_resource type="Texture2D" uid="uid://byns1ghljegfh" path="res://Assets/strawberry.png" id="1_71saw"]
+[ext_resource type="Script" path="res://Scripts/strawberry.gd" id="1_r8uom"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2secu"]
+radius = 26.0192
+
+[node name="strawberry" type="RigidBody2D"]
+script = ExtResource("1_r8uom")
+
+[node name="Strawberry" type="Sprite2D" parent="."]
+texture = ExtResource("1_71saw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2secu")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://d24sfc00r3q6o"]
+
+[ext_resource type="Texture2D" uid="uid://cbfhony5ebqll" path="res://Assets/pineapple.png" id="1_3a2d1"]
+[ext_resource type="Script" path="res://Scripts/pineapple.gd" id="1_7ps4q"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xkwis"]
+radius = 105.043
+
+[node name="pineapple" type="RigidBody2D"]
+script = ExtResource("1_7ps4q")
+
+[node name="Pineapple" type="Sprite2D" parent="."]
+texture = ExtResource("1_3a2d1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xkwis")
